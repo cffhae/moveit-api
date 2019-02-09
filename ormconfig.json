@@ -1,0 +1,18 @@
+{
+  "type": "mssql",
+  "host": "lytec2",
+  "username": "api_moveit",
+  "password": "m0v3Th@tP@ti3nt!",
+  "database": "MoveIT",
+  "options": {
+    "instanceName": "lytecmd"
+  },
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/entity/**/*.ts"],
+  "migrations": ["src/migration/**/*.ts"],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration"
+  }
+}
