@@ -2,11 +2,11 @@ import { InjectConnection } from "typeorm-typedi-extensions";
 import { Connection, Repository } from "typeorm";
 import { StatusCode } from "../entity/StatusCode";
 import { Service } from "typedi";
-import { AddStatusCodeInput } from "../entity/AddStatusCode.input";
+import { AddStatusCodeInput } from "../entity/AddStatusCodeInput";
 import { UserInputError } from "apollo-server-express";
 
 @Service()
-export class StatusCodeRepository {
+export class StatusCodeService {
   private repository: Repository<StatusCode>;
 
   constructor(

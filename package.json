@@ -9,6 +9,7 @@
   "author": "Michael Hall",
   "license": "MIT",
   "dependencies": {
+    "apollo-server-core": "^2.4.0",
     "apollo-server-express": "^2.4.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",

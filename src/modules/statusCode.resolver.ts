@@ -1,14 +1,14 @@
 import { Resolver, Query, Mutation, Arg } from "type-graphql";
 import { StatusCode } from "../entity/StatusCode";
-import { StatusCodeRepository } from "../services/statusCode.service";
+import { StatusCodeService } from "../services/statusCode.service";
 import { Container, Service } from "typedi";
-import { AddStatusCodeInput } from "../entity/AddStatusCode.input";
+import { AddStatusCodeInput } from "../entity/AddStatusCodeInput";
 
 @Service()
 @Resolver(() => StatusCode)
 export class StatusCodeResolver {
-  constructor(private service: StatusCodeRepository) {
-    this.service = Container.get(StatusCodeRepository);
+  constructor(private service: StatusCodeService) {
+    this.service = Container.get(StatusCodeService);
   }
 
   @Query(() => [StatusCode])
